@@ -1,11 +1,11 @@
 export default function LandingBanner() {
 	return (
-	  <div className="bg-gradient-to-r from-customGreen-light to-customGreen-lightest py-10 flex items-center justify-center sm:my-10 md:my-20 lg:my-30">
+	  <div className="bg-gradient-to-r from-customGreen-light dark:to-darkCustomGreen-light dark:from-darkCustomGreen-lightest to-customGreen-lightest py-10 flex items-center justify-center sm:my-10 md:my-20 lg:my-30">
 		<div className="text-center px-4">
-		  <h1 className="text-4xl sm:text-5xl font-bold text-customGreen-dark">
+		  <h1 className="text-4xl sm:text-5xl font-bold text-customGreen-dark dark:text-customGreen-light ">
 			Terapilerden Yararlanmak için geç klamayın
 		  </h1>
-		  <p className="text-xl sm:text-2xl mt-4 text-customGreen-midDark">
+		  <p className="text-xl sm:text-2xl mt-4 text-customGreen-midDark dark:text-customWhite">
 			Çocuklarınızın gelişimi için en iyi tedavi yöntemlerini sunuyoruz.
 		  </p>
 		  <div className="mt-8">

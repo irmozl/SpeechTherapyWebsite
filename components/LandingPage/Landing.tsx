@@ -20,15 +20,15 @@ const Landing = () => {
 
         {/* Metin - Sağ taraf */}
         <div className="w-full lg:w-1/2 text-center lg:text-left">
-          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-customGreen-darkest mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold text-customGreen-darkest dark:text-customGreen-light mb-6">
             Dil ve konuşma terapisi alanında uzmanlaşmış bir ekip ile çalışın
           </h1>
-          <p className="text-lg sm:text-xl text-gray-800 mb-8">
+          <p className="text-lg sm:text-xl text-gray-800 dark:text-gray-300 mb-8">
             Hemen bizimle iletişime geçin ve tedaviye başlayın.
           </p>
           <a
             href="#iletisim"
-            className="inline-block bg-customGreen-midDark text-customWhite px-6 py-3 rounded-lg text-lg font-medium hover:bg-customGreen-dark transition duration-300"
+            className="inline-block bg-customGreen-midDark dark:bg-customGreen-darkest text-customWhite px-6 py-3 rounded-lg text-lg font-medium hover:bg-customGreen-dark transition duration-300"
           >
             İletişime Geçin
           </a>

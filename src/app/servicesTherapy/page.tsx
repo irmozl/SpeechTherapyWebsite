@@ -54,7 +54,7 @@ export default function About() {
   return (
     <section className=" py-12 md:py-32 px-4 sm:px-6 lg:px-8">
       <div className="max-w-5xl mx-auto text-center">
-        <h2 className="text-4xl font-bold text-customGreen-darkest mb-10">
+        <h2 className="text-4xl font-bold text-customGreen-darkest dark:text-customGreen-light mb-10">
           Hizmetlerimiz
         </h2>
 
@@ -62,12 +62,12 @@ export default function About() {
           {services.map((service) => (
             <div
               key={service.id}
-              className="bg-gray-100 rounded-lg shadow-md p-6 text-left hover:shadow-lg transition-shadow duration-300"
+              className="bg-gray-100 dark:bg-customDarkGray rounded-lg shadow-md p-6 text-left hover:shadow-lg transition-shadow duration-300"
             >
               <h3 className="text-xl font-semibold text-customGreen-dark mb-2">
                 {service.title}
               </h3>
-              <p className="text-gray-700 text-sm">{service.description}</p>
+              <p className="text-gray-700 dark:text-gray-300 text-sm">{service.description}</p>
             </div>
           ))}
         </div>

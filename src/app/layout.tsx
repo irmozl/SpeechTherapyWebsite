@@ -9,7 +9,7 @@ import { ReactNode } from 'react';
 export default function Layout({ children }: { children: ReactNode }) {
   return (
     <html>
-      <body className=''>
+      <body className="dark:bg-darkCustomBlack ">
         <Navbar/>
         <main className="container mx-auto px-10">{children}</main>
         <Footer />

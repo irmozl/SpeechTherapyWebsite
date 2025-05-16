@@ -47,18 +47,18 @@ export default function FAQ() {
   return (
     <section className=" py-16 px-4 sm:px-8 lg:px-24">
       <div className="max-w-4xl mx-auto">
-        <h2 className="text-3xl sm:text-4xl font-bold text-customGreen-darkest text-center mb-10">
+        <h2 className="text-3xl sm:text-4xl font-bold text-customGreen-darkest dark:text-customGreen-light text-center mb-10">
           Sıkça Sorulan Sorular
         </h2>
         <div className="space-y-4">
           {faqs.map((faq) => (
             <div
               key={faq.question} // Her soruya özgü bir key kullanıyoruz
-              className="bg-white border border-customGreen-light rounded-xl shadow-sm"
+              className="bg-white border border-customGreen-light rounded-xl shadow-sm dark:bg-customDarkGray dark:border-none"
             >
               <button
                 onClick={() => toggleFAQ(faq.question)}
-                className="w-full flex items-center justify-between px-6 py-4 text-left text-gray-800 font-medium text-lg  transition duration-200 rounded-t-xl"
+                className="w-full flex items-center justify-between px-6 py-4 text-left text-gray-800 dark:text-gray-300 font-medium text-lg  transition duration-200 rounded-t-xl"
               >
                 {faq.question}
                 <ChevronDown
@@ -68,7 +68,7 @@ export default function FAQ() {
                 />
               </button>
               {openFAQ === faq.question && (
-                <div className="px-6 pb-4 text-gray-700 ">
+                <div className="px-6 pb-4 text-gray-700 dark:text-gray-300  ">
                   {faq.answer}
                 </div>
               )}

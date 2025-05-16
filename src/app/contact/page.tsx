@@ -4,30 +4,30 @@ export default function IletisimPage() {
     <main className="py-12 px-4 md:px-10 md:pt-24 lg:py-36">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10">
         {/* İletişim Formu */}
-        <div className="w-full lg:w-1/2 border-customGreen-midDark border  rounded-xl shadow-md p-6 space-y-6">
-          <h1 className="text-2xl font-bold text-customGreen-dark">Bizimle İletişime Geçin</h1>
+        <div className="w-full lg:w-1/2 dark:bg-customDarkGray dark:border-none border-customGreen-midDark border  rounded-xl shadow-md p-6 space-y-6">
+          <h1 className="text-2xl font-bold text-customGreen-dark dark:text-customGreen-light">Bizimle İletişime Geçin</h1>
           <form className="space-y-4">
             <div>
-              <label className="block text-sm font-medium text-customGreen-midDark mb-1">Adınız</label>
+              <label className="block text-sm font-medium text-customGreen-midDark dark:text-gray-300 mb-1">Adınız</label>
               <input
                 type="text"
-                className="w-full border border-customGreen-midDark rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-customGreen-midDark "
+                className="w-full border dark:border-gray-500 border-customGreen-midDark rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-customGreen-midDark "
                 placeholder="Ad Soyad"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-customGreen-midDark mb-1">E-posta</label>
+              <label className="block text-sm font-medium text-customGreen-midDark dark:text-gray-300 mb-1">E-posta</label>
               <input
                 type="email"
-                className="w-full border border-customGreen-midDark rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-customGreen-midDark"
+                className="w-full border dark:border-gray-500 border-customGreen-midDark rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-customGreen-midDark"
                 placeholder="ornek@eposta.com"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-customGreen-midDark mb-1">Mesajınız</label>
+              <label className="block text-sm font-medium text-customGreen-midDark dark:text-gray-300 mb-1">Mesajınız</label>
               <textarea
                 rows={4}
-                className="w-full border border-customGreen-midDark rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-customGreen-midDark"
+                className="w-full border dark:border-gray-500 border-customGreen-midDark rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-customGreen-midDark"
                 placeholder="Mesajınızı yazın..."
               />
             </div>

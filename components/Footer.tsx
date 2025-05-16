@@ -4,15 +4,15 @@ import { FaSquareInstagram,FaLinkedin,FaBrain } from "react-icons/fa6";
 
 export default function Footer () {
   return (
-    <footer className="bg-customGreen-lightest text-customGreen-dark shadow-md mt-20">
+    <footer className="bg-customGreen-lightest dark:bg-darkCustomGreen-lightest text-customGreen-dark dark:text-customGreen-light shadow-md mt-20">
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <Link href="/"><FaBrain className="size-10 text-customGreen-light mb-7" /></Link>
-          <p className="mt-2 text-sm">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, enim in. Repellendus fugit labore eveniet, qui molestiae praesentium inventore ea exercitationem.</p>
+          <p className="mt-2 text-sm dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, enim in. Repellendus fugit labore eveniet, qui molestiae praesentium inventore ea exercitationem.</p>
         </div>
         <div>
           <h4 className="text-md font-semibold mb-2 text-customGreen-midLight">Sayfalar</h4>
-          <ul className="space-y-1 text-sm">
+          <ul className="space-y-1 text-sm dark:text-gray-300">
             <li><Link href="/" className='hover:shadow-md'>Anasayfa</Link></li>
             <li><Link href="/about" className='hover:shadow-md'>Hakkımızda</Link></li>
             <li><Link href="/servicesTherapy" className='hover:shadow-md'>Hizmetler</Link></li>
@@ -22,7 +22,7 @@ export default function Footer () {
         </div>
         <div>
           <h4 className="text-md font-semibold mb-2 text-customGreen-midLight">Sosyal Medya Hesapları</h4>
-          <div className="flex gap-4 text-customGreen-midLight">
+          <div className="flex gap-4 text-customGreen-midDark dark:text-gray-300 ">
             <a href="https://www.instagram.com/dkt.idilkocasari/"><FaSquareInstagram  className="w-7 h-7" /></a>
             <a href="https://www.linkedin.com/in/idil-kocasar%C4%B1%C4%B1/"><FaLinkedin className="w-7 h-7" /></a>
           </div>

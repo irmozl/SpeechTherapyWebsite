@@ -27,7 +27,7 @@ export default function BlogSection() {
   return (
     <section className=" py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto text-center">
-        <h2 className="text-3xl font-bold text-customGreen-darkest mb-8">
+        <h2 className="text-3xl font-bold text-customGreen-darkest dark:text-customGreen-light mb-8">
           Blog Yazılarımızı İnceleyin
         </h2>
 
@@ -35,12 +35,12 @@ export default function BlogSection() {
           {blogPosts.map((post) => (
             <div
               key={post.id}
-              className="bg-gray-100 rounded-lg shadow-md p-6 text-left hover:shadow-lg transition-shadow duration-300"
+              className="bg-gray-100 dark:bg-customDarkGray rounded-lg shadow-md p-6 text-left hover:shadow-lg transition-shadow duration-300"
             >
-              <h3 className="text-xl font-semibold text-customGreen-dark mb-2">
+              <h3 className="text-xl font-semibold text-customGreen-dark dark:text-gray-300 mb-2">
                 {post.title}
               </h3>
-              <p className="text-sm text-gray-700 mb-4">{post.summary}</p>
+              <p className="text-sm text-gray-700 dark:text-customGreen-light mb-4">{post.summary}</p>
               <Link
                 href={post.href}
                 className="inline-block text-customGreen-midDark font-medium hover:underline"
@@ -54,7 +54,7 @@ export default function BlogSection() {
         <div className="mt-10">
           <Link
             href="/blog"
-            className="inline-block bg-customGreen-dark text-customWhite px-6 py-3 rounded-md hover:bg-customGreen-midDark transition-colors duration-300"
+            className="inline-block bg-customGreen-dark text-customWhite  dark:bg-customGreen-midDark px-6 py-3 rounded-md hover:bg-customGreen-midDark transition-colors duration-300"
           >
             Tüm Blogları Gör
           </Link>
