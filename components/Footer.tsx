@@ -8,7 +8,7 @@ export default function Footer () {
       <div className="max-w-7xl mx-auto px-4 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
         <div>
           <Link href="/"><FaBrain className="size-10 text-customGreen-light mb-7" /></Link>
-          <p className="mt-2 text-sm dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci, enim in. Repellendus fugit labore eveniet, qui molestiae praesentium inventore ea exercitationem.</p>
+          <p className="mt-2 text-sm dark:text-gray-300">Dil ve konuşma terapisi alanında uzmanlaşmış bir ekip ile çalışın.</p>
         </div>
         <div>
           <h4 className="text-md font-semibold mb-2 text-customGreen-midLight">Sayfalar</h4>

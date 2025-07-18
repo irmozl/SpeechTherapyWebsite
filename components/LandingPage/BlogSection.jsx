@@ -1,29 +1,20 @@
 // components/BlogPreviewSection.tsx
-
+'use server';
+import { getCollection } from "../../lib/db"
 import Link from "next/link";
 
-const blogPosts = [
-  {
-    id: 1,
-    title: "Çocuklarda Konuşma Gelişimi",
-    summary: "Dil gelişim sürecinde dikkat edilmesi gerekenler ve erken müdahalenin önemi.",
-    href: "/blog/cocuklarda-konusma-gelisimi",
-  },
-  {
-    id: 2,
-    title: "Kekemelik Tedavi Yöntemleri",
-    summary: "Modern yaklaşımlar ve terapi süreçleri hakkında detaylı bilgi.",
-    href: "/blog/kekemelik-tedavisi",
-  },
-  {
-    id: 3,
-    title: "Artikülasyon Bozuklukları",
-    summary: "Seslerin yanlış çıkarılması ve tedavi süreçleri.",
-    href: "/blog/artikulasyon-bozuklugu",
-  },
-];
+async function getRandomPosts() {
+  const postsCollection = await getCollection("Post");
+  const posts = await postsCollection.aggregate([{ $sample: { size: 3 } }]).toArray();
+  return posts;
+}
 
-export default function BlogSection() {
+
+
+
+export default async function BlogSection() {
+  const randomPosts = await getRandomPosts()
+
   return (
     <section className=" py-12 px-4 sm:px-6 lg:px-8">
       <div className="max-w-7xl mx-auto text-center">
@@ -32,17 +23,18 @@ export default function BlogSection() {
         </h2>
 
         <div className="grid gap-8 md:grid-cols-2 lg:grid-cols-3  ">
-          {blogPosts.map((post) => (
+          {randomPosts.map((post) => (
             <div
-              key={post.id}
+              key={post._id}
               className="bg-gray-100 dark:bg-customDarkGray rounded-lg shadow-md p-6 text-left hover:shadow-lg transition-shadow duration-300"
             >
+              
               <h3 className="text-xl font-semibold text-customGreen-dark dark:text-gray-300 mb-2">
                 {post.title}
               </h3>
               <p className="text-sm text-gray-700 dark:text-customGreen-light mb-4">{post.summary}</p>
               <Link
-                href={post.href}
+                href={`/blog/${post.slug}`}
                 className="inline-block text-customGreen-midDark font-medium hover:underline"
               >
                 Devamını Oku →

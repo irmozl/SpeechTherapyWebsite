@@ -7,32 +7,51 @@ const features = [
 	  icon: <MdHealthAndSafety />,
 	  title: 'Gecikmiş Konuşma',
 	  description: 'sıuhderhbrıjugheqbıuherasdfasdfasddfgggfgjksfdgjk.',
+	  id:1,
 	},
 	{
 	  icon: <GiHealthCapsule />,
-	  title: 'kekemelik terapisi',
+	  title: 'Konuşma Sesi Bozuklukları: Fonolojik ve Artikülasyon Bozuklukları',
 	  description: 'Yıuhderhbrıjugheqbıuherasdfasdfasddfgggfgjksfdgj.',
+	  id:2,
 	},
 	{
 	  icon: <GiHealthDecrease />,
-	  title: 'Artikülasyon ve Ses Bozuklukları',
+	  title: 'Akıcılık Bozuklukları: Kekemelik ve Hızlı Bozuk Konuşma',
 	  description: 'ıuhderhbrıjugheqbıuherasdfasdfasddfgggfgjksfdgj.',
+	  id:3,
 	},
 	{
 		icon: <MdHealthAndSafety />,
-		title: 'Gecikmiş Konuşma',
+		title: 'Gelişimsel Sorunlara Bağlı Dil Bozuklukları',
 		description: 'sıuhderhbrıjugheqbıuherasdfasdfasddfgggfgjksfdgjk.',
+		id:4,
 	  },
 	  {
 		icon: <GiHealthCapsule />,
-		title: 'kekemelik terapisi',
+		title: 'İşitme Kaybına Bağlı Dil ve Konuşma Bozuklukları',
 		description: 'Yıuhderhbrıjugheqbıuherasdfasdasddfgggfgjksfdgj.',
+		id:5,
 	  },
 	  {
 		icon: <GiHealthDecrease />,
-		title: 'Artikülasyon ve Ses Bozuklukları',
-		description: 'ıuhderhbrıjugheqbıuherasdfasdfasddfgggfgjnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnnksfdgj.', 
+		title: 'Afazi: Beyin Hasarına Bağlı Dil Bozukluğu',
+		description: 'ıuhderhbrıjugheqbıuherasdfasdfasddfgggffdgj.', 
+		id:6,
 	},
+	{
+		icon: <GiHealthCapsule />,
+		title: 'Motor Konuşma Bozuklukları: Apraksi ve Dizartri',
+		description: 'Yıuhderhbrıjugheqbıuherasdfasdasddfgggfgjksfdgj.',
+		id:7,
+	  },
+	  {
+	  icon: <MdHealthAndSafety />,
+	  title: 'Ses bozuklukları',
+	  description: 'sıuhderhbrıjugheqbıuherasdfasdfasddfgggfgjksfdgjk.',
+	  id:8,
+	},
+	
 	
   ];
   
@@ -53,12 +72,12 @@ const features = [
 			  <h2 className="text-xl font-semibold mb-2 break-words w-full dark:text-customGreen-light">
 				{feature.title}
 			  </h2>
-			  <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base break-words w-full mb-4">
+			  {/* <p className="text-gray-600 dark:text-gray-300 text-sm sm:text-base break-words w-full mb-4">
 				{feature.description}
-			  </p>
-			  <button className="mt-4 px-4 py-2 bg-customGreen-midDark text-white rounded hover:bg-customGreen-dark text-sm sm:text-base">
+			  </p> */}
+			  <a href="/servicesTherapy" className="mt-4 px-4 py-2 bg-customGreen-midDark text-white rounded hover:bg-customGreen-dark text-sm sm:text-base">
 				Bilgi Alın
-			  </button>
+			  </a>
 			</div>
 		  ))}
 		</div>
