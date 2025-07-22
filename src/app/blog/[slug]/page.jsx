@@ -7,12 +7,12 @@ import { Metadata } from "next";
 import { MdArrowBack } from "react-icons/md";
 import Link from "next/link";
 
-interface Params {
-  slug: string;
-}
+// export interface Params {
+//   slug: string;
+// }
 
 // Dinamik metadata 
-export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
+export async function generateMetadata({ params }){
   const post = await getPostBySlug(params.slug);
   return {
     title: post?.title || "Blog Yazısı",
@@ -20,7 +20,7 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
   };
 }
 
-async function getPostBySlug(slug: string) {
+async function getPostBySlug(slug) {
   const postsCollection = await getCollection("Post");
   const usersCollection = await getCollection("User");
 
@@ -36,7 +36,7 @@ async function getPostBySlug(slug: string) {
   };
 }
 
-export default async function BlogPostPage({ params }: { params: Params }) {
+export default async function BlogPostPage({ params }) {
   const post = await getPostBySlug(params.slug);
 
   if (!post) {

@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/db.js", "src/app/blog/page.jsx", "components/LandingPage/BlogSection.jsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "lib/db.js", "src/app/blog/page.jsx", "components/LandingPage/BlogSection.jsx", "src/app/blog/[slug]/page.jsx"],
   "exclude": ["node_modules"]
 }
