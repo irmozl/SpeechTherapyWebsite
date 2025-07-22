@@ -1,31 +1,78 @@
 // src/app/iletisim/page.tsx
+"use client";
+
 export default function IletisimPage() {
   return (
     <main className="py-12 px-4 md:px-10 md:pt-24 lg:py-36">
       <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10">
         {/* İletişim Formu */}
         <div className="w-full lg:w-1/2 dark:bg-customDarkGray dark:border-none border-customGreen-midDark border  rounded-xl shadow-md p-6 space-y-6">
-          <h1 className="text-2xl font-bold text-customGreen-dark dark:text-customGreen-light">Bizimle İletişime Geçin</h1>
-          <form className="space-y-4">
+          <h1 className="text-2xl font-bold text-customGreen-dark dark:text-customGreen-light">
+            Bizimle İletişime Geçin
+          </h1>
+          <form
+            className="space-y-4"
+            onSubmit={async (e) => {
+              e.preventDefault();
+              const form = e.currentTarget;
+              const ad = form.ad.value;
+              const email = form.email.value;
+              const telefon = form.telefon.value;
+              const mesaj = form.mesaj.value;
+
+              const res = await fetch("/api/contact", {
+                method: "POST",
+                headers: { "Content-Type": "application/json" },
+                body: JSON.stringify({ ad, email, telefon, mesaj }),
+              });
+
+              if (res.ok) {
+                alert("Mesajınız başarıyla gönderildi!");
+                form.reset();
+              } else {
+                alert("Bir hata oluştu, lütfen tekrar deneyin.");
+              }
+            }}
+          >
             <div>
-              <label className="block text-sm font-medium text-customGreen-midDark dark:text-gray-300 mb-1">Adınız</label>
+              <label className="block text-sm font-medium text-customGreen-midDark dark:text-gray-300 mb-1">
+                Adınız
+              </label>
               <input
+                name="ad"
                 type="text"
                 className="w-full border dark:border-gray-500 border-customGreen-midDark rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-customGreen-midDark "
                 placeholder="Ad Soyad"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-customGreen-midDark dark:text-gray-300 mb-1">E-posta</label>
+              <label className="block text-sm font-medium text-customGreen-midDark dark:text-gray-300 mb-1">
+                Telefon
+              </label>
               <input
+                name="telefon"
+                type="phone"
+                className="w-full border dark:border-gray-500 border-customGreen-midDark rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-customGreen-midDark"
+                placeholder="(123) 456-7890"
+              />
+            </div>
+            <div>
+              <label className="block text-sm font-medium text-customGreen-midDark dark:text-gray-300 mb-1">
+                E-posta
+              </label>
+              <input
+                name="email"
                 type="email"
                 className="w-full border dark:border-gray-500 border-customGreen-midDark rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-customGreen-midDark"
                 placeholder="ornek@eposta.com"
               />
             </div>
             <div>
-              <label className="block text-sm font-medium text-customGreen-midDark dark:text-gray-300 mb-1">Mesajınız</label>
+              <label className="block text-sm font-medium text-customGreen-midDark dark:text-gray-300 mb-1">
+                Mesajınız
+              </label>
               <textarea
+                name="mesaj"
                 rows={4}
                 className="w-full border dark:border-gray-500 border-customGreen-midDark rounded-md px-3 py-2 focus:outline-none focus:ring-2 focus:ring-customGreen-midDark"
                 placeholder="Mesajınızı yazın..."
@@ -54,4 +101,3 @@ export default function IletisimPage() {
     </main>
   );
 }
-
